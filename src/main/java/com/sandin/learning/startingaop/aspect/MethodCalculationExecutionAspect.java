@@ -26,7 +26,7 @@ public class MethodCalculationExecutionAspect {
     // joinPoint la espcífica instancia de lo que interceptamos. el metadata de lo interceptado.
     // el proceso que ejecuta el monitoring de los aspesct sellma weaving & weaber
     @Around(
-            value = "execution(* com.sandin.learning.startingaop.business.*.*(..)))"
+            value = "CommonJoinPointConfig.businessLayerExecution()"
     )
     public void around(ProceedingJoinPoint joinPoint) throws Throwable{
 

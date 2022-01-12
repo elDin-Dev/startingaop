@@ -25,7 +25,7 @@ public class AfterAopAspect {
     // joinPoint la espcífica instancia de lo que interceptamos. el metadata de lo interceptado.
     // el proceso que ejecuta el monitoring de los aspesct sellma weaving & weaber
     @AfterReturning(
-            value = "execution(* com.sandin.learning.startingaop.business.*.*(..)))",
+            value = "CommonJoinPointConfig.businessLayerExecution()",
             returning = "result"
     )
     public void after(JoinPoint joinPoint, Object result){
@@ -35,7 +35,7 @@ public class AfterAopAspect {
     }
 
     @AfterThrowing(
-            value = "execution(* com.sandin.learning.startingaop.business.*.*(..)))",
+            value = "CommonJoinPointConfig.businessLayerExecution()",
             throwing = "exc"
     )
     public void throwing(JoinPoint joinPoint, Object exc){
@@ -44,7 +44,7 @@ public class AfterAopAspect {
     }
 
     @After(
-            value = "execution(* com.sandin.learning.startingaop.business.*.*(..)))"
+            value = "CommonJoinPointConfig.businessLayerExecution()"
     )
     public void afterExecution(JoinPoint joinPoint){
         //Advice body code
