@@ -1,5 +1,6 @@
-package com.sandin.learning.startingaop;
+package com.sandin.learning.startingaop.business;
 
+import com.sandin.learning.startingaop.data.Dao1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
