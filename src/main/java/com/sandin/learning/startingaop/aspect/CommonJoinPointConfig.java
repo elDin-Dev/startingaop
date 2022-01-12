@@ -15,4 +15,7 @@ public class CommonJoinPointConfig {
 
     @Pointcut("bean(*Dao*)")
     public void beanContainsDao(){}
+
+    @Pointcut("@annotation(com.sandin.learning.startingaop.aspect.TrackTime)")
+    public void trackTimeAnnotation(){}
 }
