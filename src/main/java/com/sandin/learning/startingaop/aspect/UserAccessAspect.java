@@ -17,11 +17,11 @@ public class UserAccessAspect {
     // Pattern:
     // execution(* PACKAGE.*.*(..))
     // interceptará cualquier tipo de retorno
-    // en PACKAGE
+    // en PACKAGE.. (Cualquier subpackage '..')
     // cualquier classe
     // cualquier método
     // si tener en cuenta los parámetros.
-    @Before("execution(* com.sandin.learning.startingaop.business.*.*(..)))")
+    @Before("execution(* com.sandin.learning.startingaop..*.*(..)))")
     public void before(JoinPoint joinPoint){
 
         logger.info("Check for user access.");
