@@ -1,5 +1,6 @@
 package com.sandin.learning.startingaop.aspect;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
@@ -21,9 +22,9 @@ public class BeforeAspect {
     // cualquier método
     // si tener en cuenta los parámetros.
     @Before("execution(* com.sandin.learning.startingaop.business.*.*(..)))")
-    public void before(){
+    public void before(JoinPoint joinPoint){
 
-        logger.info("Intercepted calls {}");
+        logger.info("Intercepted calls {}",joinPoint);
     }
 
 }
