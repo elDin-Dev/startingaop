@@ -25,7 +25,7 @@ public class UserAccessAspect {
     //
     // joinPoint la espcífica instancia de lo que interceptamos. el metadata de lo interceptado.
     // el proceso que ejecuta el monitoring de los aspesct sellma weaving & weaber
-    @Before("execution(* com.sandin.learning.startingaop..*.*(..)))")
+    @Before("execution(* com.sandin.learning.startingaop.business.*.*(..)))")
     public void before(JoinPoint joinPoint){
 
         //Advice body code
