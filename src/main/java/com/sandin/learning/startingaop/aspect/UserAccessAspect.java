@@ -14,16 +14,21 @@ public class UserAccessAspect {
     private Logger logger = LoggerFactory
             .getLogger(this.getClass());
 
-    // Pattern:
+    // Asppect = pointcut + advice
     // execution(* PACKAGE.*.*(..))
     // interceptará cualquier tipo de retorno
     // en PACKAGE.. (Cualquier subpackage '..')
     // cualquier classe
     // cualquier método
     // si tener en cuenta los parámetros.
+    // pointcut: @Before("execution
+    //
+    // joinPoint la espcífica instancia de lo que interceptamos. el metadata de lo interceptado.
+    // el proceso que ejecuta el monitoring de los aspesct sellma weaving & weaber
     @Before("execution(* com.sandin.learning.startingaop..*.*(..)))")
     public void before(JoinPoint joinPoint){
 
+        //Advice body code
         logger.info("Check for user access.");
         logger.info("->Allowed execution for: {}",joinPoint);
     }
